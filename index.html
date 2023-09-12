@@ -12,6 +12,7 @@
     />
 
     <style>
+      /* this is the univesal css that apply for the all pages  */
       * {
         margin: 0;
         padding: 0;
@@ -21,6 +22,9 @@
         color: white;
         font-family: "Poppins", sans-serif;
       }
+      /* this is the univesal css that apply for the all pages  */
+
+      /* this us for the nav bar css designing  */
 
       nav {
         display: flex;
@@ -41,24 +45,100 @@
         list-style: none;
       }
 
-      .right {
+      .left-nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .right-nav {
         font-size: 1.5rem;
       }
+
+      /* for the hover effect on the header section  */
+      .left-nav ul li a:hover {
+        cursor: pointer;
+        color: rgb(153, 153, 229);
+      }
+      /* for the hover effect on the header section  */
+
+      /* this us for the nav bar css designing  */
+
+      /* this is designing for the main tag that containe the section tag  */
+      .first-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 60px 0px;
+      }
+
+      .left-section {
+        font-size: 2.7rem;
+      }
+      #element {
+        color: rgb(141, 141, 255);
+        box-sizing: border-box;
+      }
+
+      .left-section .name {
+        color: rgb(141, 141, 255);
+      }
+
+      .right-section img {
+        margin-top: 90px;
+        width: 80%;
+      }
+
+      .first-section > div {
+        width: 30%;
+      }
+
+      /* this is designing for the main tag that containe the section tag  */
     </style>
   </head>
   <body>
+    <!-- this html code for the header section  -->
     <header>
       <nav>
-        <div class="right">Sandeep Portfolio</div>
-        <div class="left">
+        <div class="right-nav">Sandeep Portfolio</div>
+        <div class="left-nav">
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Sarvice</li>
-            <li>Contact me</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Sarvice</a></li>
+            <li><a href="/">Contact me</a></li>
           </ul>
         </div>
       </nav>
     </header>
+    <!-- this html code for the header section  -->
+
+    <!-- code for the write main section  -->
+    <main>
+      <section class="first-section">
+        <div class="left-section">
+          Hi, I am <span class="name">SANDEEP</span>
+          <div>I am a passionate</div>
+          <span id="element"></span>
+        </div>
+        <div class="right-section">
+          <img src="header.png" alt="section img" />
+        </div>
+      </section>
+    </main>
+    <!-- code for the write main section  -->
+
+    <!-- cdn link for the type js animation -->
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Developer", "Frontend Developer", "Problem Solving "],
+        typeSpeed: 50,
+      });
+      // <!-- Setup and start animation! -->
+    </script>
   </body>
 </html>
